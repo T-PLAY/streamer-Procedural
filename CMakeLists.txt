@@ -33,7 +33,7 @@ if(NOT ${EXTERNAL_NAME}_FOUND)
 #        GIT_TAG main
         GIT_TAG installMinorFix
         GIT_SHALLOW ON
-        GIT_PROGRESS TRUE
+        GIT_PROGRESS FALSE
         PREFIX "external"
         CMAKE_ARGS "${CMAKE_ARGS}")
 
