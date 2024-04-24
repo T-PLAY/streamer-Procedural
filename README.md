@@ -4,7 +4,7 @@ Minimal example of streamer application using hub service.
 
 Streamer code using procedural data to share it through server hub.
 
-Able to check hub install (shared only, static only, UWP, x86, arm64) quickly from CI. 
+Allow to check hub install (shared only, static only, UWP, x86, arm64) quickly from CI. 
 
 ## Supported platforms
 * Linux

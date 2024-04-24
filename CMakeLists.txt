@@ -4,6 +4,9 @@ project(app-streamer-Procedural)
 
 set(CMAKE_CXX_STANDARD 17)
 
+option(BUILD_STATIC "Build static" ON)
+option(BUILD_SHARED "Build shared" ON)
+
 ############################## hub
 
 include(ExternalProject)
@@ -16,6 +19,8 @@ if(NOT ${EXTERNAL_NAME}_FOUND)
         CMAKE_ARGS
         "-DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_CURRENT_BINARY_DIR}/external/src/${EXTERNAL_NAME}-install"
         "-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}"
+        "-DHUB_BUILD_STATIC=${BUILD_STATIC}"
+        "-DHUB_BUILD_SHARED=${BUILD_SHARED}"
         )
 
     message(STATUS "Preparing external project \"${EXTERNAL_NAME}\" with args:")
